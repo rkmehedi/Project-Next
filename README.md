@@ -25,6 +25,22 @@ Users can browse products, view detailed product pages, and log in using their G
 * **UI Feedback**: [React Toastify](https://fkhadra.github.io/react-toastify/)
 * **Icons**: [Lucide React](https://lucide.dev/)
 
+## Application Routes
+
+### Pages
+
+* `/` - The main landing page featuring a hero section and product highlights.
+* `/products` - Displays a grid of all available products fetched from the database.
+* `/products/[id]` - A dynamic route that shows the detailed information for a single product.
+* `/dashboard/add-product` - A protected route, accessible only to logged-in users, for adding new products to the store.
+
+### API Routes
+
+* `/api/auth/[...nextauth]` - Handles all NextAuth.js authentication logic (signin, signout, callbacks, session management).
+* `/api/products` - The primary endpoint for products. Handles `GET` requests to fetch all products (with an optional `limit` parameter) and `POST` requests to create a new product.
+* `/api/products/[id]` - A dynamic API route that handles `GET` requests to fetch a single product by its unique `_id`.
+
+
 ## Getting Started
 
 Follow these instructions to get a local copy of the project up and running.
